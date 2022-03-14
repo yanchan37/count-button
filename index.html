@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+<body>
+    <div style="display:flex; ">
+        <div>
+            <h1 id="number" >0</h1>
+            <button id = "Button">Click me!</button>
+            <button id = "reset_btn">Reset</button>
+        </div>
+        <h1>-</h1>
+        <div>
+            <h1 id="number2">0</h1>
+            <button id = "Button2">Click me!</button>
+            <button id = "reset_btn2">Reset</button>
+        </div>
+    </div>
+    
+    <script>
+        const num = document.getElementById("number");
+        const Btn = document.getElementById("Button");
+        const reset = document.getElementById("reset_btn");
+
+        Btn.addEventListener("click",function(){
+            //console.log(num.innerText) //numの中身のテキスト
+            let num_int = parseInt(num.innerText)
+            console.log(num_int + 1)
+            num.innerText = num_int + 1
+            
+        })
+        reset.addEventListener("click",function(){
+            num.innerText = 0
+        })
+
+        const num2 = document.getElementById("number2");
+        const Btn2 = document.getElementById("Button2");
+        const reset2 = document.getElementById("reset_btn2");
+        Btn2.addEventListener("click",function(){
+            //console.log(num.innerText) //numの中身のテキスト
+            let num_int = parseInt(num2.innerText)
+            console.log(num_int + 1)
+            num2.innerText = num_int + 1
+            
+        })
+        reset2.addEventListener("click",function(){
+            num2.innerText = 0
+        })
+
+    </script>
+    
+</body>
+</html>
